@@ -1,4 +1,2 @@
-# resume
-
-## Callum Stein - Software Engineer
+# Callum Stein - Software Engineer
 LaTeX template for my personal resume
