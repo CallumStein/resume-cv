@@ -20,7 +20,6 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
 %----------FONT OPTIONS----------
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
@@ -38,8 +37,7 @@
 
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \setlength{\footskip}{6pt}
@@ -51,28 +49,20 @@
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
-\urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-2pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
+\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -80,25 +70,12 @@
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
@@ -107,29 +84,14 @@
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
-%\begin{center}
-%    \textbf{\Huge \scshape Callum Stein} \\ \vspace{1pt}
-%    \small 
-%    0422 923 084 $|$ 
-%    \href{mailto:callumstein.1@gmail.com}{callumstein.1@gmail.com} $|$ 
-%    \href{https://www.linkedin.com/in/callum-stein}{linkedin.com/in/callum-stein} $|$
-%    \href{https://github.com/CallumStein}{github.com/CallumStein}
-%\end{center}
-
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}c}
-\begin{tabular}[c]{c} % vertical center for name
-\textbf{\Huge \scshape Callum Stein} \\[-10pt]
+\begin{tabular}[c]{c}
+\textbf{\Huge \scshape Callum Stein} \\
 \end{tabular} &
-\begin{tabular}[t]{r} % right side (two lines)
+\begin{tabular}[c]{r}
 \small 0422 923 084 $|$ \href{mailto:callumstein.1@gmail.com}{callumstein.1@gmail.com} \\
 \small \href{https://www.linkedin.com/in/callum-stein}{linkedin.com/in/callum-stein} $|$ 
 \href{https://github.com/CallumStein}{github.com/CallumStein}
@@ -137,76 +99,68 @@
 \end{tabular*}
 \vspace{-6pt}
 
-
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Monash University}{Melbourne, VIC}
-      {Master of Information Technology}{Oct. 2021 -- Jul. 2023}
-    \resumeSubheading
-      {Central Queensland University}{Rockhampton, QLD}
-      {Bachelor of Electrical Engineering, First-Class Honours}{Mar. 2011 -- Aug. 2015}
-  \resumeSubHeadingListEnd
-
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Monash University}{Melbourne, VIC}
+    {Master of Information Technology}{Oct. 2021 -- Jul. 2023}
+  \resumeSubheading
+    {Central Queensland University}{Rockhampton, QLD}
+    {Bachelor of Electrical Engineering, First-Class Honours}{Mar. 2011 -- Aug. 2015}
+\resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-  % Data Engineer Project - Westpac Data Migration
-  \resumeSubheading
-    {Data Engineer}{Feb. 2025 -- Present}
-    {DXC Technology}{Sydney - Australia}
-    \resumeItemListStart
-      \resumeItem{Core data engineer for a large-scale bank data migration project, transforming customer data across multiple SQL Server databases}
-      \resumeItem{Developed complex ETL transformation procedures, mappings, and Informatica workflows to process high-volume datasets}
-      \resumeItem{Optimized database performance and data pipelines for reliability and scalability}
-      \resumeItem{Collaborated with a team of engineers to ensure data integrity and compliance with regulatory standards}
-      \resumeItem{Contributed to project documentation and knowledge sharing to support long-term maintainability}
-    \resumeItemListEnd
+\resumeSubheading
+  {Data Engineer}{Feb. 2025 -- Present}
+  {DXC Technology}{Sydney, Australia}
+  \resumeItemListStart
+    \resumeItem{Core engineer for large-scale bank data migration, processing 50M+ records across multiple SQL Server databases.}
+    \resumeItem{Developed ETL procedures, mappings, and Informatica workflows to ensure accurate transformation of high-volume datasets.}
+    \resumeItem{Optimized database performance and pipelines, improving processing reliability and scalability.}
+    \resumeItem{Collaborated with cross-functional teams to maintain data integrity and compliance with regulations.}
+  \resumeItemListEnd
 
-  % Full-Stack Engineer Project - SmartGroup Novated Leasing
-  \resumeSubheading
-    {Full-Stack Engineer}{June 2024 -- Jan. 2025}
-    {DXC Technology}{Sydney - Australia}
-    \resumeItemListStart
-      \resumeItem{Developed a Novated-Leasing and quoting web application for a leading leasing company in Australia}
-      \resumeItem{Implemented frontend using React, TypeScript, and Next.js for a dynamic and responsive user interface}
-      \resumeItem{Built REST APIs using ASP.NET to handle backend logic and integration with internal systems}
-      \resumeItem{Designed ETL pipelines in Databricks to process and transform large-scale financial data for reporting and analytics}
-      \resumeItem{Collaborated with cross-functional teams to ensure seamless deployment and ongoing maintenance}
-    \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-
-      \resumeProjectHeading
-          {\textbf{LoveYourArea - Sustainable Communities Project} $|$ \emph{JavaScript, Django, Python, MySQL}}{Jan. 2023 -- May 2023}
-          \resumeItemListStart
-            \resumeItem{Developed a web application to help residents in the Greater Melbourne area engage with local community activities and walking paths}
-            \resumeItem{Implemented backend services using Django and Python, with MySQL as the database for storing user and event data}
-            \resumeItem{Designed a dynamic, user-friendly frontend in JavaScript to provide tailored local recommendations and events}
-            \resumeItem{Improved community engagement by enabling citizens to discover unique experiences and reduce the anxiety of relocating to new areas}
-          \resumeItemListEnd
+\resumeSubheading
+  {Full-Stack Engineer}{June 2024 -- Jan. 2025}
+  {DXC Technology}{Sydney, Australia}
+  \resumeItemListStart
+    \resumeItem{Built a Novated-Leasing web application with React, TypeScript, Next.js, and ASP.NET REST APIs.}
+    \resumeItem{Designed ETL pipelines in Databricks to process and transform large-scale financial data for reporting and analytics.}
+    \resumeItem{Implemented responsive UI and seamless backend integration for dynamic quoting and workflow processes.}
+    \resumeItem{Worked with cross-functional teams to ensure smooth deployment and ongoing maintenance.}
+  \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
 
-%-----------PROGRAMMING SKILLS-----------
+\resumeProjectHeading
+    {\textbf{LoveYourArea - Sustainable Communities} $|$ \emph{JavaScript, Django, Python, MySQL}}{Jan. 2023 -- May 2023}
+    \resumeItemListStart
+      \resumeItem{Developed a web app for Greater Melbourne residents to engage in local activities and walking paths.}
+      \resumeItem{Implemented backend services with Django/Python and MySQL for event and user management.}
+      \resumeItem{Designed a dynamic, user-friendly frontend in JavaScript to provide tailored community recommendations.}
+      \resumeItem{Enhanced community engagement by helping users discover unique experiences and reduce relocation anxiety.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: C\#,TypeScript, JavaScript, SQL (Microsoft SQL Server), HTML/CSS, Python, R} \\
-     \textbf{Frameworks}{: React, Next.js, ASP.NET, Django, Jest} \\
-     \textbf{Developer Tools}{: Git, Docker, AWS, Microsoft Azure, VS Code, Informatica} \\
-     \textbf{Libraries}{: pandas, Informatica IICS, NextAuth, Material-UI, Ant Design, Tailwind CSS}
-    }}
- \end{itemize}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{
+\item{
+\textbf{Languages:} C\#, TypeScript, JavaScript, SQL (MS SQL Server), Python, HTML/CSS, R \\
+\textbf{Frameworks:} React, Next.js, ASP.NET, Django, Jest \\
+\textbf{Libraries:} pandas, NextAuth, Material-UI, Ant Design, Tailwind CSS \\
+\textbf{Developer Tools:} Git, Docker, AWS, Microsoft Azure, VS Code, Informatica
+}}
+\end{itemize}
 
-
-%-------------------------------------------
 \end{document}
