@@ -1,4 +1,4 @@
-# LaTex Garbage
+# LaTex Build Files
 *.aux
 *.fdb_latexmk
 *.fls
