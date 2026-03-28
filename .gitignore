@@ -5,3 +5,9 @@
 *.log
 *.out
 *synctex.gz
+
+# Personal Information Files
+signature.png
+
+# Temp Processing Files
+*~
